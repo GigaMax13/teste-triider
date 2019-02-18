@@ -1,10 +1,12 @@
 import React from 'react';
 
-import { Menu } from '../Menu';
+import { Navbar } from '../Navbar';
+
+import './Layout.scss';
 
 export const Layout = ({ children }) => (
   <div className='layout'>
-    <Menu/>
+    <Navbar/>
     <div className='layout__container'>
       { children }
     </div>
