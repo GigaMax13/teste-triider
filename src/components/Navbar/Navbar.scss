@@ -53,7 +53,7 @@
   list-style: none;
   justify-self: flex-end;
   padding: 0 20px;
-  margin-left: auto;
+  margin: 0 0 0 auto;
 
   @include respond-above(sm) {
     display: flex;
@@ -61,13 +61,12 @@
 }
 
 .navbar__item {
-  padding: 0 20px;
+  margin: 0 20px;
 }
 
 .navbar__link {
   &, &:link, &:visited {
     text-decoration: none;
-    font-size: 16px;
     color: #565656;
   }
 
