@@ -1,0 +1,27 @@
+@import '../../assets/styles/mixins';
+
+.user-menu {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.user-menu__thumbnail {
+  width: 26px;
+  height: 26px;
+  border-radius: 100%;
+
+  @include respond-above(sm) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.user-menu__name {
+  margin: 0 15px;
+  font-size: 16px;
+
+  @include respond-above(sm) {
+    margin: 0 25px;
+  }
+}
