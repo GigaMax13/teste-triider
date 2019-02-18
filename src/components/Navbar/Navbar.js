@@ -3,9 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-import './Menu.scss';
+import { UserMenu } from '../UserMenu';
+import logo from './../../assets/images/logo.svg';
+import userThumbnailMock from './../../assets/images/user_thumbnail_mock.png';
 
-import logo from './../../assets/images/logo.png';
+import './Navbar.scss';
 
 const navbarItems = [
   {
@@ -30,13 +32,15 @@ const navbarItems = [
   }
 ];
 
-export const Menu = () => (
-  <div className='navbar'>
+export const Navbar = () => (
+  <header className='navbar'>
     <div className='navbar__area'>
       <div className='navbar__menu-icon'>
         <FontAwesomeIcon icon={faBars}/>
       </div>
-      <img className='navbar__logo' src={logo} alt="Triider"/>
+      <a href='https://www.triider.com.br' target='_blank' rel='noopener noreferrer' title='Triider' className='navbar__logo'>
+        <img src={logo} alt="Triider"/>
+      </a>
       <ul className='navbar__list'>
         {(() => navbarItems.map(({ href, text }, index) => {
           return (
@@ -55,7 +59,7 @@ export const Menu = () => (
       </ul>
     </div>
     <div className='navbar__menu-user'>
-
+      <UserMenu name='Juliana' thumbnail={userThumbnailMock}/>
     </div>
-  </div>
+  </header>
 );

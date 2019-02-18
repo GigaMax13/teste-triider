@@ -1,12 +1,23 @@
 @import '../../assets/styles/mixins';
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
-  width: 100%;
   height: 65px;
+  padding: 0 15px;
   border-bottom: 1px solid #CBCBCB;
   background-color: #FFF;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+
+  @include respond-above(sm) {
+    padding: 0 60px;
+    box-shadow: none;
+  }
 }
 
 .navbar__area {
@@ -17,6 +28,8 @@
 
 .navbar__menu-icon {
   display: block;
+  font-size: 30px;
+  margin-right: 15px;
 
   @include respond-above(sm) {
     display: none;
@@ -24,26 +37,36 @@
 }
 
 .navbar__logo {
-  width: auto;
-  height: 65px;
+  display: block;
+  width: 65px;
+  height: auto;
+  margin-top: 4px;
+
+  @include respond-above(sm) {
+    width: 85px;
+    margin-top: 0;
+  }
 }
 
 .navbar__list {
-  display: flex;
+  display: none;
   list-style: none;
   justify-self: flex-end;
-  padding: 0 30px;
+  padding: 0 20px;
   margin-left: auto;
+
+  @include respond-above(sm) {
+    display: flex;
+  }
 }
 
 .navbar__item {
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .navbar__link {
   &, &:link, &:visited {
     text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     color: #565656;
   }
@@ -60,7 +83,12 @@
 }
 
 .navbar__menu-user {
-  width: 250px;
+  display: flex;
+  align-items: center;
   height: 100%;
-  background-color: red;
+
+  @include respond-above(sm) {
+    padding-left: 40px;
+    border-left: 1px solid #CBCBCB;
+  }
 }
