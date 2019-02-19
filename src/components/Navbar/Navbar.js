@@ -31,6 +31,7 @@ const navbarItems = [
     href: '/',
   }
 ];
+const userNameMock = 'Juliana';
 
 export const Navbar = () => (
   <header className='navbar'>
@@ -59,7 +60,7 @@ export const Navbar = () => (
       </ul>
     </div>
     <div className='navbar__menu-user'>
-      <UserMenu name='Juliana' thumbnail={userThumbnailMock}/>
+      <UserMenu name={userNameMock} thumbnail={userThumbnailMock}/>
     </div>
   </header>
 );
