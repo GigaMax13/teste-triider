@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import order from './modules/orders';
+import orders from './modules/Orders';
 
 const reducer = combineReducers({
-  order,
+  orders,
 });
 
 export default reducer;
