@@ -1,0 +1,126 @@
+@import '../../assets/styles/mixins';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 234px;
+  height: 254px;
+  padding: 25px 45px;
+  border: 1px solid #CBCBCB;
+  border-radius: 3px;
+  margin: auto;
+  background: #FFF;
+
+  @include respond-below(sm) {
+    &:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @include respond-above(sm) {
+    margin: unset;
+    margin-bottom: 32px;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.card__header {
+  border-bottom: 1px solid #CBCBCB;
+}
+
+.card__title {
+  height: 36px;
+  margin: 0 auto 9px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 14px;
+  text-align: center;
+
+  & > span {
+    display: block;
+  }
+}
+
+.card__status {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 26px;
+  margin: 0 auto 20px;
+}
+
+.card__validity {
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 14px;
+  color: #565656;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 36px;
+}
+
+.card__thumbnails-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0 0 17px;
+}
+
+.card__thumbnail-item {
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  overflow: hidden;
+
+  &:not(:first-of-type) {
+    margin-left: 5px;
+  }
+}
+
+.card__thumbnail-item--text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #C4C4C4;
+}
+
+.card__thumbnail {
+  width: 33px;
+  height: 33px;
+}
+
+.card__budget {
+  margin: 0;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 14px;
+  color: #565656;
+}
+
+.card__footer {
+  justify-self: flex-end;
+  margin-top: auto;
+}
