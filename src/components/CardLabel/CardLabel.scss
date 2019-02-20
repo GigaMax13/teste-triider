@@ -1,0 +1,20 @@
+.card-label {
+  display: inline-block;
+  padding: 2px 10px 3px;
+  font-weight: 500;
+  line-height: 21px;
+  font-size: 13px;
+  color: #FFFFFF;
+}
+
+.card-label--cancelado {
+  background-color: #EF4949;
+}
+
+.card-label--finalizado {
+  background-color: #59BC5C;
+}
+
+.card-label--contratado {
+  background-color: #4983EF;
+}
