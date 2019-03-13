@@ -1,0 +1,102 @@
+@import '../../assets/styles/mixins';
+
+.meus-orcamentos {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  min-height: 500px;
+
+  @include respond-above(sm) {
+    margin-bottom: 70px;
+  }
+}
+
+.meus-orcamentos--centralized-content {
+  justify-content: center;
+}
+
+.meus-orcamentos__spinner {
+  margin: auto;
+  font-size: 40px;
+  color: #EF7E31;;
+}
+
+.meus-orcamentos__error {
+  margin: auto;
+  color: #EF4949;
+}
+
+.meus-orcamentos__header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 60px 0 45px;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 60px 0 25px;
+  }
+}
+
+.meus-orcamentos__title {
+  margin: 0 auto 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 20px;
+  color: #565656;
+
+  @include respond-above(sm) {
+    margin: auto 0;
+  }
+}
+
+.meus-orcamentos__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+
+  @include respond-above(sm) {
+    justify-content: flex-start;
+    margin: auto 0;
+  }
+}
+
+.meus-orcamentos__filter {
+  cursor: pointer;
+  font-size: 15px;
+  color: #565656;
+
+  @include respond-above(sm) {
+    font-size: 18px;
+
+    &:not(:first-of-type) {
+      margin-left: 60px;
+    }
+  }
+}
+
+.meus-orcamentos__filter--active {
+  color: #EF7E31;
+}
+
+.meus-orcamentos__cards {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-bottom: 45px;
+
+  @include respond-above(sm) {
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 84px 18px;
+    border: 1px solid #EEE;
+    background: #FFF;
+  }
+}

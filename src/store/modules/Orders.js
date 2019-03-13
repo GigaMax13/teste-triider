@@ -1,6 +1,7 @@
 import { createReducer } from 'reduxsauce';
 import axios from 'axios';
 
+
 export const Types = {
   GET_ORDERS: 'orders/GET_ORDERS',
 };

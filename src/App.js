@@ -5,7 +5,7 @@ import { Redirect, Route, Router, Switch } from 'react-router';
 import { history, store } from './store';
 
 import { Layout } from './components/Layout';
-import { MeusOrcamentos } from './pages/MeusOrcamentos/MeusOrcamentos';
+import MeusOrcamentos from './pages/MeusOrcamentos/MeusOrcamentos';
 
 import './App.scss';
 

@@ -6,11 +6,11 @@ import { Footer } from '../Footer';
 import './Layout.scss';
 
 export const Layout = ({ children }) => (
-  <div className='layout'>
+  <main className='layout'>
     <Navbar/>
     <div className='layout__container'>
       { children }
     </div>
     <Footer/>
-  </div>
+  </main>
 );
